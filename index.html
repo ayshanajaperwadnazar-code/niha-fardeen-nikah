@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fathima Niha & Fardeen Rahman | Nikah Invitation</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  background: #f8f1e7;
+  color: #49352f;
+  text-align: center;
+}
+
+.cover {
+  min-height: 100vh;
+  background:
+    linear-gradient(#0004, #0005),
+    url("front-background.jpeg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.cover-content {
+  color: #fff8ed;
+  max-width: 650px;
+  padding: 35px 25px;
+  background: #33271955;
+  border: 1px solid #e7d6b0;
+  backdrop-filter: blur(3px);
+}
+
+.arabic {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #713b45;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+.cover h1 {
+  font-size: clamp(34px, 7vw, 60px);
+  font-weight: normal;
+  margin: 18px 0;
+}
+
+.cover p {
+  letter-spacing: 3px;
+  line-height: 2;
+}
+
+.open-btn {
+  margin-top: 30px;
+  padding: 13px 30px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.open-btn:hover {
+  background: white;
+  color: #493b2c;
+}
+
+.invitation {
+    display: none;
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    padding: 40px 18px;
+    background: transparent;
+    animation: fadeIn 1.5s ease;
+}
+
+.invitation::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+
+    background-image: url("inner-background.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 45px 25px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.section {
+  padding: 28px 10px;
+}
+
+h2 {
+  color: #4a2f0d;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.names {
+  font-family: "Fertigo Pro", Georgia, serif;
+  font-size: clamp(29px, 6vw, 45px);
+  line-height: 1.5;
+  color: #5c1d2e;
+}
+
+.ampersand {
+  font-size: 25px;
+  color: #a47c43;
+  margin: 8px;
+}
+
+.details {
+  line-height: 2;
+  font-size: 17px;
+  color: #49352f;
+}
+
+.family {
+  font-size: 18px;
+  line-height: 2;
+  color: #49352f;
+}
+
+.divider {
+  width: 90px;
+  height: 1px;
+  background: #a47c43;
+  margin: 25px auto;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.countdown div {
+  min-width: 75px;
+  padding: 15px 10px;
+  background: #eee3d0;
+}
+
+.countdown strong {
+  display: block;
+  font-size: 27px;
+  color: #80633b;
+}
+
+.countdown span {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.map-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 25px;
+  background: #80633b;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 35px;
+  color: #713b45;
+  font-style: italic;
+
+.closing-section {
+  margin-top: 45px;
+  padding: 25px 10px;
+  color: #713b45;
+}
+
+.closing-title {
+  color: #956d3e;
+  font-size: 28px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.closing-arabic {
+  font-family: "Times New Roman", serif;
+  font-size: clamp(23px, 5vw, 30px);
+  line-height: 2;
+  color: #713b45;
+  margin: 20px 0;
+}
+
+.closing-translation {
+  font-size: 16px;
+  line-height: 2;
+  color: #49352f;
+  max-width: 550px;
+  margin: 15px auto;
+}
+
+.closing-ameen {
+  color: #956d3e;
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 30px 15px;
+  }
+
+  .invitation {
+    padding: 25px 12px;
+  }
+
+  .invitation::before {
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .cover {
+    background-position: center center;
+    background-size: cover;
+  }
+ .music-button {
+  position: fixed;
+  bottom: 20px;
+  left: 15px;
+  z-index: 1000;
+  padding: 12px 18px;
+  border: 1px solid #a47c43;
+  border-radius: 30px;
+  background: #713b45;
+  color: #fff8ed;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px #0003;
+}
+</style>
+</head>
+
+<body>
+
+<section class="cover" id="cover">
+  <div class="cover-content">
+    <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <p> NIKAH INVITATION</p>
+    <h1>Fathima Niha<br>&<br>Fardeen Rahman</h1>
+    <p>17 JANUARY 2027</p>
+    <button class="open-btn" onclick="openInvitation()">
+      Open Invitation
+    </button>
+  </div>
+</section>
+
+<main class="invitation" id="invitation">
+  <div class="card">
+
+  <div class="section">
+  <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+  <p>With the blessings of Allah and our beloved families</p>
+
+  <h2>We cordially invite you to celebrate</h2>
+
+  <div class="names">Fathima Niha PN</div>
+  <p>D/O Abdul Nazar A & Salwa K</p>
+
+  <div class="ampersand">&</div>
+
+  <div class="names">Fardeen Rahman Gafoor</div>
+  <p>S/O BK Abdul Gafoor & Fareeda</p>
+
+  <div class="divider"></div>
+
+  <p class="details">As we begin our beautiful journey together</p>
+</div>
+   
+    <div class="divider"></div>
+
+    <div class="section">
+      <h2>The Nikah Ceremony</h2>
+      <div class="details">
+        <p><strong>17 January 2027</strong></p>
+        <p>Sunday | 5:00 PM</p>
+        <p>Treebon Resort</p>
+        <p> Kollanganam, Vidhyanagar, Kasaragod</p>
+      </div>
+      <a class="map-btn"
+         href="https://www.google.com/maps/search/?api=1&query=Treebon+Resort+Cherkala+Kasaragod"
+         target="_blank">
+        View Location
+      </a>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <h2>Counting Down to Our Special Day</h2>
+      <div class="countdown">
+        <div><strong id="days">0</strong><span>Days</span></div>
+        <div><strong id="hours">0</strong><span>Hours</span></div>
+        <div><strong id="minutes">0</strong><span>Minutes</span></div>
+        <div><strong id="seconds">0</strong><span>Seconds</span></div>
+      </div>
+    </div>
+
+    
+<footer class="closing-section">
+
+  <h2 class="closing-title">With Love & Duas</h2>
+
+  <div class="divider"></div>
+
+  <p class="closing-arabic" dir="rtl">
+    بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا
+    وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+  </p>
+
+  <p class="closing-translation">
+    May Allah bless for you (your spouse) and bless you,
+    and may He unite both of you in goodness.
+  </p>
+
+  <p class="closing-ameen">Ameen 🤍</p>
+
+</footer>
+
+
+  </div>
+<audio id="weddingAudio" loop>
+  <source src="wedding-music.mp4" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" class="music-button" onclick="toggleMusic()">
+  ♫ Play Music
+</button>
+
+
+</main>
+
+<script>
+
+
+
+function openInvitation() {
+  const cover = document.getElementById("cover");
+  const invitation = document.getElementById("invitation");
+  const audio = document.getElementById("weddingAudio");
+  const button = document.getElementById("musicButton");
+
+  cover.style.transition = "opacity 1.2s ease";
+  cover.style.opacity = "0";
+
+  setTimeout(() => {
+    cover.style.display = "none";
+    invitation.style.display = "block";
+    invitation.style.opacity = "0";
+
+    window.scrollTo(0, 0);
+
+    requestAnimationFrame(() => {
+      invitation.style.transition = "opacity 1.5s ease";
+      invitation.style.opacity = "1";
+    });
+
+    audio.play().then(() => {
+      button.textContent = "♫ Pause Music";
+    }).catch(() => {
+      button.textContent = "♫ Play Music";
+    });
+
+  }, 1200);
+}
+function toggleMusic() {
+  const audio = document.getElementById("weddingAudio");
+  const button = document.getElementById("musicButton");
+
+  if (audio.paused) {
+    audio.play().then(() => {
+      button.textContent = "♫ Pause Music";
+    });
+  } else {
+    audio.pause();
+    button.textContent = "♫ Play Music";
+  }
+}
+
+function updateCountdown() {
+  const weddingDate = new Date("2027-01-17T17:00:00+05:30");
+  const now = new Date();
+  const difference = weddingDate - now;
+
+  if (difference <= 0) {
+    ["days", "hours", "minutes", "seconds"].forEach(id => {
+      document.getElementById(id).textContent = "0";
+    });
+    return;
+  }
+
+  document.getElementById("days").textContent =
+    Math.floor(difference / (1000 * 60 * 60 * 24));
+
+  document.getElementById("hours").textContent =
+    Math.floor((difference / (1000 * 60 * 60)) % 24);
+
+  document.getElementById("minutes").textContent =
+    Math.floor((difference / (1000 * 60)) % 60);
+
+  document.getElementById("seconds").textContent =
+    Math.floor((difference / 1000) % 60);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
